@@ -1,0 +1,90 @@
+.portada{
+    font-family: 'Ravie', Arial, serif;
+    font-size: 34px;
+    font-weight: bold;
+
+    margin-top: 30px;
+}
+.portada div{
+    margin-top: 0px;
+}
+
+.usuario{
+    background-color: seagreen
+}
+
+input{
+    max-width: 300px;
+}
+
+.chat{
+    background-color: aliceblue;
+    height: 500px;
+    font-size: 20px;
+    width: 100%;
+    margin-bottom: 25px;
+    font-family: 'Lucida Sans';
+    font-weight: normal;
+    
+}
+
+.mensajes{
+    height: 400px;
+    overflow-y: auto;
+}
+
+.chat span{
+    font-weight: bold;
+    color: royalblue;
+}
+
+.escribir_chat{
+    position: absolute;
+    bottom: 0;
+}
+
+.escribir_chat input{
+    max-width: 250px;
+    
+    
+}
+
+#img-pregunta{
+    max-width: 100%;
+    background-color: rgb(164, 205, 238);
+    
+}
+
+#img-respuesta{
+    max-width: 150px;
+    background-color: slateblue
+}
+
+.select_avatar{
+    text-align: center;
+}
+
+.select_avatar img{
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+
+.select_avatar img:hover{
+    border: 2px solid seagreen;
+}
+
+.select_avatar img:select{
+    border: 2px solid seagreen;
+}
+
+.avatar{
+    width: 30px;
+    height: 30px;
+}
+
+
+
+.dropdown-menu li{
+    display: inline;
+}

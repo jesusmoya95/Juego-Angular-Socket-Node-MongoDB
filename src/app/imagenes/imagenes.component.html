@@ -1,0 +1,228 @@
+<div class="container portada">
+
+  <div class="row">
+    <!-- Contenido -->
+    <div class="col-12 col-sm-12 col-md-12 col-lg-8">
+      <div class="container usuario" *ngIf='mostrar_usuario'>
+        <div class="row">
+            <div class="col-1 col-sm-2 col-md-2 col-lg-4"></div>
+            <div class="col-8 col-sm-8 col-md-8 col-lg-8">
+                
+                <h1>
+                  <img src="{{ imagen }}{{ avatar_seleccionado }}" alt="No se ha podido cargar la imagen" width="60px" height="60px">
+                  {{ nick_name_dato }}
+                </h1>
+            </div>
+          </div>
+      </div>
+    
+      <div class="sesion" *ngIf='mostrar_sesion'>
+        <div class="row">
+            <div class="col-1 col-sm-2 col-md-2 col-lg-4"></div>
+            <div class="col-8 col-sm-8 col-md-8 col-lg-8">
+              <div class="dropdown avatares_lista select_avatar">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Avatar<span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><img src="{{ imagen }}avatar1.png" alt="volver a cargar" (click)="select_avatar('avatar1.png')"></li>
+                  <li><img src="{{ imagen }}avatar2.png" alt="volver a cargar" (click)="select_avatar('avatar2.png')"></li>
+                  <li><img src="{{ imagen }}avatar3.png" alt="volver a cargar" (click)="select_avatar('avatar3.png')"></li>
+                  <li><img src="{{ imagen }}avatar4.png" alt="volver a cargar" (click)="select_avatar('avatar4.png')"></li>
+                  <li><img src="{{ imagen }}avatar5.png" alt="volver a cargar" (click)="select_avatar('avatar5.png')"></li>
+                  <li><img src="{{ imagen }}avatar6.png" alt="volver a cargar" (click)="select_avatar('avatar6.png')"></li>
+                  <li><img src="{{ imagen }}avatar7.png" alt="volver a cargar" (click)="select_avatar('avatar7.png')"></li>
+                  <li><img src="{{ imagen }}avatar8.png" alt="volver a cargar" (click)="select_avatar('avatar8.png')"></li>
+                  <li><img src="{{ imagen }}avatar9.png" alt="volver a cargar" (click)="select_avatar('avatar9.png')"></li>
+                  <li><img src="{{ imagen }}avatar10.png" alt="volver a cargar" (click)="select_avatar('avatar10.png')"></li>
+                </ul>
+                
+              </div>
+              <img src="{{ imagen }}{{ avatar_seleccionado }}" alt="No se ha podido cargar la imagen" width="60px" height="60px">
+              <input type="text" placeholder="Nick_Name" width="20px" [(ngModel)]="nick_name_dato" (keyup.enter)="entrar()">
+              
+              <p>{{ nick_name_error }}</p>
+            </div>
+          </div>
+        
+          <div class="row">
+            <div class="col-4 col-sm-4 col-md-4 col-lg-4"></div>
+            <div class="col-8 col-sm-8 col-md-8 col-lg-8">
+              <input type="button" value="Entrar" name="entrar" (click)="entrar()">
+            </div>
+          </div>
+        
+          
+      </div>
+
+      <div *ngIf='persona'>
+        <div class="row">
+              <div class="col-4 col-sm-4 col-md-4 col-lg-4"></div>
+              <div class="col-8 col-sm-8 col-md-8 col-lg-8">
+                <h2>Crear Partida</h2>
+              </div>
+              <div class="col-4 col-sm-4 col-md-4 col-lg-4"></div>
+              <div class="col-8 col-sm-8 col-md-8 col-lg-8">
+                <input type="button" value="Crear" name="crear" (click)="crear()">
+              </div>
+        </div>
+
+        <div class="row">
+            <div class="col-4 col-sm-4 col-md-4 col-lg-4"></div>
+            <div class="col-8 col-sm-8 col-md-8 col-lg-8">
+              <h2>Unirse a una Partida</h2>
+            </div>
+            <div class="col-4 col-sm-4 col-md-4 col-lg-4"></div>
+            <div class="col-8 col-sm-8 col-md-8 col-lg-8">
+              <input type="button" value="Unirse" name="unirse" (click)="unirse()">
+            </div>
+        </div>
+      </div>
+    
+      <!--<div class="sala" *ngIf="mostrar_sala">
+        <div class="row">
+          <div class="col-4 col-sm-4 col-md-4 col-lg-4"></div>
+          <div class="col-8 col-sm-8 col-md-8 col-lg-8">
+            <h2>Crear sala</h2>
+            <input type="text" placeholder="Sala" width="20px" [(ngModel)]="sala_dato">
+          </div>
+        </div>
+      
+        <div class="row">
+            <div class="col-4 col-sm-4 col-md-4 col-lg-4"></div>
+            <div class="col-8 col-sm-8 col-md-8 col-lg-8">
+              <input type="button" value="Crear" name="crear" (click)="crear()">
+            </div>
+          </div>
+    
+        <div class="row">
+          <div class="col-4 col-sm-4 col-md-4 col-lg-4"></div>
+          <div class="col-8 col-sm-8 col-md-8 col-lg-8">
+            <h2>Unirse a una sala</h2>
+            <input type="text" placeholder="Sala" width="20px" [(ngModel)]="sala_unirse_dato">
+          </div>
+        </div>
+    
+        <div class="row">
+          <div class="col-4 col-sm-4 col-md-4 col-lg-4"></div>
+          <div class="col-8 col-sm-8 col-md-8 col-lg-8">
+            <input type="button" value="Unirse" name="unirse" (click)="unirse()">
+          </div>
+        </div>
+          
+      </div>
+    -->
+    
+      <div class="row empezar" *ngIf='mostrar_empezar'>
+        <div class="col-4 col-sm-4 col-md-4 col-lg-4"></div>
+        <div class="col-8 col-sm-8 col-md-8 col-lg-8">
+            <input type="button" value="Empezar" name="empezar" id="empezar" (click)="empezar()">
+        </div>
+      </div>
+
+      <div class="row partida" *ngIf='this.servicio.datos_juego[0].mostrar_partida && this.sesion_iniciada'>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+          <div *ngFor='let pregunta of this.servicio.datos_juego'>
+
+            <div *ngIf='acierto'>
+              <h1>{{ respuesta }}</h1>
+              <input type="button" value="OK" name="ok" id="ok" (click)="ok()">
+
+            </div>
+
+
+            <div class="container" *ngIf='preguntaaa'>
+                <div class="row">
+                  <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                    <h1> {{ pregunta.pregunta }}</h1>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12 col-sm-12 col-md-9 col-lg-9">
+                    <img src="{{ imagen }}{{ pregunta.img_pregunta }}" id="img-pregunta" alt="Imagen">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-6 col-sm-6 col-md-3 col-lg-3">
+                    <input type=image src="{{ imagen }}{{ pregunta.img_a }}" class="img-fluid" (click)="imagen_selec_a()" id="img-respuesta">
+                  </div>
+                  <div class="col-6 col-sm-6 col-md-3 col-lg-3">
+                    <input type=image src="{{ imagen }}{{ pregunta.img_b }}" class="img-fluid " (click)="imagen_selec_b()" id="img-respuesta">
+                  </div>
+                  <div class="col-6 col-sm-6 col-md-3 col-lg-3">
+                    <input type=image src="{{ imagen }}{{ pregunta.img_c }}" class="img-fluid" (click)="imagen_selec_c()" id="img-respuesta">              
+                  </div>
+                  <div class="col-6 col-sm-6 col-md-3 col-lg-3">
+                    <input type=image src="{{ imagen }}{{ pregunta.img_d }}" class="img-fluid" (click)="imagen_selec_d()" id="img-respuesta">              
+                  </div>
+      
+                </div>
+
+                
+            </div>
+            
+            <div *ngIf='boton_siguiente'>
+              <div class="row">
+                <div class="col-4 col-sm-4 col-md-4 col-lg-4"></div>
+                <div class="col-8 col-sm-8 col-md-8 col-lg-8">
+                  <input type="button" value="Siguente" name="siguiente" (click)="siguiente()">
+                </div>
+              </div>
+            </div>
+
+            <div *ngIf='boton_fin'>
+              <div class="row">
+                <div class="col-4 col-sm-4 col-md-4 col-lg-4"></div>
+                <div class="col-8 col-sm-8 col-md-8 col-lg-8">
+                  <input type="button" value="Fin del juego" name="fin" (click)="fin()">
+                </div>
+              </div>
+            </div>
+            
+            <div *ngIf='this.servicio.control_fin_juego'>
+              <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                  <table>
+                    <tr>
+                      <th>Usuario</th>
+                      <th>Aciertos</th>
+                      <th>Fallos</th>
+                    </tr>
+                    <tr *ngFor=" let usuario of usuarios">
+                      <td><h3>{{ usuario }}</h3></td>
+                      <td><h3>{{ this.servicio.score_aciertos[usuario] }}</h3></td>
+                      <td><h3>{{ this.servicio.score_errores[usuario] }}</h3></td>
+                    </tr>
+                  </table>
+                  
+                  
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+          
+        </div>
+      </div>
+
+
+    </div>
+
+    <!-- chat -->
+    <div class="col-12 col-sm-12 col-md-12 col-lg-4 chat">
+      <h1>CHAT</h1>
+      <div class='mensajes' *ngIf="sesion_iniciada">
+        <p *ngFor="let mensaje of mensaje_chat">
+          <img src="{{ imagen }}{{ mensaje.imagen }}" class="avatar"><span>{{ mensaje.usuario }}</span>: {{ mensaje.texto }}
+        </p>
+      </div>
+      <div class="escribir_chat">
+          <input type="text" autocomplete="off" [(ngModel)]="mensaje" (keyup.enter)="enviar_mensaje()">
+          <input type="button" value="Enviar" name="enviar" (click)="enviar_mensaje()">    
+      </div>
+      
+    </div>
+  </div>
+
+  
+
+</div>

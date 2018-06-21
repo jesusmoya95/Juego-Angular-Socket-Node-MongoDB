@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Juegos</title>
+        <link rel="icon" type="image/png" href="imagenes/favicon.png" />
+
+        <script src="/socket.io/socket.io.js"></script>
+        <script>
+            var socket = io();
+            socket.on("nick", function(datos){
+                console.log(datos)
+            });
+            socket.emit('nick','Jesus');
+
+            
+        </script>
+
+        <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+
+        <link rel="stylesheet" href="estilos.css" type="text/css">
+
+        <style>
+            body{
+                background-color: rgb(196, 255, 157);
+                margin: auto 10%;
+            }
+
+            .cabecera{
+                text-align: center;
+            }
+            .cabecera h1{
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+                font-family: cursive;
+                font-size: 40px;
+                background-image: url("imagenes/cabecera.jpg");
+            }
+
+            .menu {
+                clear:both;
+                float:left;
+                overflow:hidden;
+                width:100%;
+                background-color: rgb(179, 252, 255);
+               }
+            .menu ul{
+                float:left;
+                left:50%;
+                list-style-type:none;
+                margin:0 auto;
+                padding:0;
+                position:relative;
+            }
+            .menu ul li {
+                float:left;
+                position:relative;
+                right:50%;
+                margin: 0px 40px;
+                background-color: aqua;
+                height: 50px;
+                width: 180px;
+                font-size: 32px;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-family: cursive;
+                border-radius: 15px;
+            }
+            .menu ul li:hover{
+                background-color: darkblue;
+                color: aquamarine;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="cabecera">
+            <h1>JUEGOS DE PREGUNTAS</h1>
+            <div class="menu">
+                    <ul>
+                        <li>Imágenes</li>
+                        <li>Pensar</li>
+                        <li>Preguntas</li>
+                    </ul>
+            </div>
+        </div>
+
+        <div class="cuerpo">
+            <img src="imagenes/ejemplo1.jpg" alt="No se ha podido mostrar la imagen">
+        </div>
+
+        
+
+    </body>
+</html>

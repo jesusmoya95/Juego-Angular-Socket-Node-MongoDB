@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    background-color: rgb(196, 255, 157);
+    
+}
+
+@media (max-width: 575px) {
+    .title{
+        height: 100px;
+    }
+    .title h1{
+        font-size: 20px;
+    }
+}
+
+
+@media (min-width: 576px) and (max-width: 767px) { 
+    .title{
+        height: 100px;
+    }
+    .title h1{
+        font-size: 20px;
+    }
+
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) { 
+    
+}
+
+
+@media (min-width: 992px) { 
+    
+}

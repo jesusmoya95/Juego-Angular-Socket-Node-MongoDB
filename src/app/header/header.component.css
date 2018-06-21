@@ -1,0 +1,70 @@
+@media (max-width: 575px) {
+    .title{
+        height: 100px;
+    }
+    .title h1{
+        font-size: 30px;
+    }
+}
+
+
+@media (min-width: 576px) and (max-width: 767px) { 
+    .title{
+        height: 100px;
+    }
+    .title h1{
+        font-size: 30px;
+    }
+
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) { 
+    
+}
+
+
+@media (min-width: 992px) { 
+    
+}
+
+.header{
+    text-align: center;
+}
+
+.title{
+    background-image: url("/assets/cabecera.jpg");
+    height: 200px;
+}
+.title h1{
+    font-family: 'Ravie', 'Jokerman', Arial, sans-serif;
+    font-size: 80px;
+    
+    text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+    
+}
+
+.title h1 a{
+    text-decoration: none;
+    color: rgb(238, 255, 0);
+}
+
+.menu {
+    background-color: rgb(179, 252, 255);
+    height: 90px;
+    padding-top: 20px;
+   }
+
+.menu a{
+    text-decoration: none;
+    background-color: aqua;
+    padding: 10px;
+    font-size: 32px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 15px;
+    color: darkblue;
+}
+.menu a:hover{
+    background-color: darkblue;
+    color: aquamarine;
+}
